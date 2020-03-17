@@ -3,12 +3,13 @@ $green: #19A187;
 $blue: #367bf0;
 
 $bg-color: #f2f3f7;
+$fg-color: #7b7e8c;
 
 $glow-shadow: 0 0 .5em transparentize($blue, .3);
 
 :root {
-    --bg-color: #f2f3f7;
-    --fg-color: #7b7e8c;
+    --bg-color: $bg-color;
+    --fg-color: $fg-color;
 
     --red: $red;
     --green: $green;
@@ -53,8 +54,8 @@ $glow-shadow: 0 0 .5em transparentize($blue, .3);
 }
 
 html, body {
-    background-color: var(--bg-color);
-    color: var(--fg-color);
+    background-color: $bg-color;
+    color: $fg-color;
     margin: 0;
     font-size: 10pt;
 }
@@ -68,7 +69,7 @@ html, body {
     @extend .with-shadow;
 
     border-radius: 10px;
-    background: var(--bg-color);
+    background: $bg-color;
 }
 
 .inset {
@@ -86,7 +87,7 @@ html, body {
     margin-top: 20px;
     min-height: 100px;
     font-size: 1.2em;
-    background: var(--bg-color);
+    background: $bg-color;
 }
 
 section, article, .section, .article, .paper {
@@ -102,8 +103,8 @@ input[type="month"], input[type="week"], input[type="time"],
 input[type="number"], input[type="color"], select {
     border: 0;
     border-bottom: 1px solid $blue;
-    background: var(--bg-color);
-    color: var(--fg-color);
+    background: $bg-color;
+    color: $fg-color;
     font-weight: normal;
     border-radius: 3px;
     height: 45px;
@@ -123,8 +124,8 @@ textarea {
     @extend .outset;
 
     border: 0;
-    background: var(--bg-color);
-    color: var(--fg-color);
+    background: $bg-color;
+    color: $fg-color;
     font-weight: normal;
     padding: 15px 20px;
     margin: 20px 0 10px 0;
@@ -138,10 +139,7 @@ textarea {
     -ms-user-select: text;
     transition: box-shadow .2s;
 
-    &:focus {
-        box-shadow: $glow-shadow;
-        background: white;
-    }
+    &:focus { @extend .inset; }
 }
 
 input::placeholder, textarea::placeholder {
@@ -214,9 +212,21 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
 }
 
 label {
-    cursor: pointer;
+    &, & * { cursor: pointer; }
+
     display: inline-block;
     padding: .56em 0;
+}
+
+a {
+    &, &:link, &:visited, &:hover &:active {
+        &, & * { cursor: pointer; }
+
+        font-weight: bold;
+        color: $blue;
+        font-weight: bold;
+        text-decoration: none;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 { line-height: 1.5em; }
@@ -269,7 +279,7 @@ input[type=checkbox], input[type=radio] {
     width: 1.2em;
     margin: 0 .3em;
     box-shadow: $_box-shadow;
-    border: $_border-width solid var(--bg-color);
+    border: $_border-width solid $bg-color;
     vertical-align: text-bottom;
     transition-property: background, box-shadow;
     transition-duration: .2s;
@@ -290,9 +300,8 @@ input[type=checkbox] {
     border-radius: 25%;
 
     &:checked {
-        border-radius: 25% 25% 30% 30%;
         box-shadow: $glow-shadow,
-                    inset 0 -.15em 0 transparentize(black, .8),
+                    inset 0 -.1em 0 transparentize(black, .8),
                     inset 0 .1em .1em transparentize(white, .8);
     }
 }
@@ -305,6 +314,51 @@ input[type=radio] {
         box-shadow: $glow-shadow,
                     inset 0 .12em .1em transparentize(white, .75);
         border-bottom-width: .15em;
+    }
+}
+
+.onoffswitch {
+    $_height: 2.5rem;
+    $_width: 5rem;
+    $_handle-width: $_height;
+    $_handle-translation: $_width - $_handle-width;
+
+    height: $_height;
+    width: $_width;
+    padding: 0;
+    position: relative;
+
+    > div {
+        height: 100%;
+        width: 100%;
+        border-radius: 999px;
+        background: transparent;
+        transition: background-color .2s;
+        box-shadow: inset 2px 2px 2px 1px transparentize(black, .9),
+                    inset -2px -2px 1px white;
+
+        &::before {
+            content: '';
+            display: block;
+            height: calc(#{$_handle-width} + 2px);
+            width: calc(#{$_handle-width} + 2px);
+            border-radius: 100%;
+            background: white;
+            box-shadow: 3px 3px 5px transparentize(black, .9);
+            transform: translate(0, -1px);
+            transition: transform .2s;
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked + div {
+            background: $blue;
+            box-shadow: inset 0 2px 3px 2px transparentize(black, .8);
+
+            &::before { transform: translate($_handle-translation, -1px); }
+        }
     }
 }
 
