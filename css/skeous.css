@@ -1,12 +1,17 @@
 :root {
-  --bg-color: $bg-color;
-  --fg-color: $fg-color;
-  --red: $red;
-  --green: $green;
-  --blue: $blue; }
+  --bg-color: #f2f3f7;
+  --fg-color: #7b7e8c;
+  --red: #E43030;
+  --green: #19A187;
+  --blue: #367bf0;
+  --dark-blue: #265AB1;
+  --maroon: #B8174C;
+  --purple: #8C42AB; }
 
-::-moz-focus-inner {
-  border: 0; }
+::-moz-focus-inner, :-moz-focusring {
+  border: 0;
+  color: transparent;
+  text-shadow: 0 0 0 #7b7e8c; }
 
 ::selection, ::-moz-selection {
   color: white;
@@ -44,14 +49,23 @@ html, body {
   margin: 0;
   font-size: 10pt; }
 
-.with-shadow, .outset, .paper, textarea, button, .red-button, .green-button, .blue-button, input[type="button"], input[type="submit"], input[type="reset"] {
-  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1), -6px -6px 10px rgba(255, 255, 255, 0.65); }
+.with-shadow, .outset, .paper, input[type="text"]:not(select):focus, input[type="search"]:not(select):focus, input[type="tel"]:not(select):focus, input[type="url"]:not(select):focus,
+input[type="email"]:not(select):focus, input[type="password"]:not(select):focus, input[type="date"]:not(select):focus,
+input[type="month"]:not(select):focus, input[type="week"]:not(select):focus, input[type="time"]:not(select):focus,
+input[type="number"]:not(select):focus, input[type="color"]:not(select):focus, select:not(select):focus, textarea:not(select):focus, select, button, .red-button, .green-button, .blue-button, .checktext input:checked + span, .checktext input + span, input[type="button"], input[type="submit"], input[type="reset"] {
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1), -6px -6px 10px white; }
 
-.outset, .paper, textarea, button, .red-button, .green-button, .blue-button, input[type="button"], input[type="submit"], input[type="reset"] {
+.outset, .paper, input[type="text"]:not(select):focus, input[type="search"]:not(select):focus, input[type="tel"]:not(select):focus, input[type="url"]:not(select):focus,
+input[type="email"]:not(select):focus, input[type="password"]:not(select):focus, input[type="date"]:not(select):focus,
+input[type="month"]:not(select):focus, input[type="week"]:not(select):focus, input[type="time"]:not(select):focus,
+input[type="number"]:not(select):focus, input[type="color"]:not(select):focus, select:not(select):focus, textarea:not(select):focus, select, button, .red-button, .green-button, .blue-button, .checktext input:checked + span, .checktext input + span, input[type="button"], input[type="submit"], input[type="reset"] {
   border-radius: 10px;
   background: #f2f3f7; }
 
-.inset, textarea:focus, button.active, .active.red-button, .active.green-button, .active.blue-button, button:active, .red-button:active, .green-button:active, .blue-button:active, input[type="button"].active, input[type="button"]:active, input[type="submit"].active, input[type="submit"]:active, input[type="reset"].active, input[type="reset"]:active, hr {
+.inset, input[type="text"]:not(select), input[type="search"]:not(select), input[type="tel"]:not(select), input[type="url"]:not(select),
+input[type="email"]:not(select), input[type="password"]:not(select), input[type="date"]:not(select),
+input[type="month"]:not(select), input[type="week"]:not(select), input[type="time"]:not(select),
+input[type="number"]:not(select), input[type="color"]:not(select), select:not(select), textarea:not(select), button.active, .active.red-button, .active.green-button, .active.blue-button, .checktext input + span.active, button:active, .red-button:active, .green-button:active, .blue-button:active, .checktext input + span:active, input[type="button"].active, input[type="button"]:active, input[type="submit"].active, input[type="submit"]:active, input[type="reset"].active, input[type="reset"]:active, hr {
   border-radius: 10px;
   box-shadow: 0 0 transparent, 0 0 transparent, inset 3px 3px 5px rgba(0, 0, 0, 0.1), inset -3px -3px 5px white;
   background: #f8f9fb; }
@@ -72,32 +86,13 @@ section, article, .section, .article, .paper {
 input[type="text"], input[type="search"], input[type="tel"], input[type="url"],
 input[type="email"], input[type="password"], input[type="date"],
 input[type="month"], input[type="week"], input[type="time"],
-input[type="number"], input[type="color"], select {
-  border: 0;
-  border-bottom: 1px solid #367bf0;
-  background: #f2f3f7;
-  color: #7b7e8c;
-  font-weight: normal;
-  border-radius: 3px;
-  height: 45px;
-  padding: 0 10px;
-  font-size: 1.1rem;
-  border-radius: 0;
-  cursor: text;
-  user-select: text;
-  -webkit-touch-callout: text;
-  -webkit-user-select: text;
-  -khtml-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text; }
-
-textarea {
+input[type="number"], input[type="color"], select, textarea {
   border: 0;
   background: #f2f3f7;
   color: #7b7e8c;
   font-weight: normal;
   padding: 15px 20px;
-  margin: 20px 0 10px 0;
+  margin: 10px 0;
   font-size: 1.1rem;
   cursor: text;
   user-select: text;
@@ -107,6 +102,11 @@ textarea {
   -moz-user-select: text;
   -ms-user-select: text;
   transition: box-shadow .2s; }
+
+select {
+  cursor: pointer;
+  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCguMDM0IDAgMCAuMDM0IC02LjggMS43ZS01KSIgc3R5bGU9ImZpbGw6IzdiN2U4YyI+PHBhdGggZD0ibTQ4MCAzNDQtMjExLTIxMmMtMTYtMTYtNDEtMTYtNTcgMC0xNiAxNi0xNiA0MiAwIDU3bDIzOCAyMzljOC40IDguNSAyMCAxMiAzMSAxMiAxMSAwLjU2IDIyLTMuMiAzMS0xMmwyMzgtMjM5YzE2LTE2IDE2LTQyIDAtNTdzLTQxLTE2LTU3IDB6IiBzdHlsZT0iZmlsbDojN2I3ZThjIi8+PC9nPjwvc3ZnPgo=) no-repeat right 1em center;
+  background-size: 1.2em; }
 
 input::placeholder, textarea::placeholder {
   opacity: 1;
@@ -130,7 +130,7 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none; }
 
-button, .red-button, .green-button, .blue-button, input[type="button"], input[type="submit"], input[type="reset"] {
+button, .red-button, .green-button, .blue-button, .checktext input:checked + span, .checktext input + span, input[type="button"], input[type="submit"], input[type="reset"] {
   border: 0;
   text-transform: capitalize;
   padding: 10px 0;
@@ -142,7 +142,7 @@ button, .red-button, .green-button, .blue-button, input[type="button"], input[ty
   transition-property: background-color, box-shadow;
   transition-delay: .2s;
   transition-duration: .2s; }
-  button.active, .active.red-button, .active.green-button, .active.blue-button, button:active, .red-button:active, .green-button:active, .blue-button:active, input[type="button"].active, input[type="button"]:active, input[type="submit"].active, input[type="submit"]:active, input[type="reset"].active, input[type="reset"]:active {
+  button.active, .active.red-button, .active.green-button, .active.blue-button, .checktext input + span.active, button:active, .red-button:active, .green-button:active, .blue-button:active, .checktext input + span:active, input[type="button"].active, input[type="button"]:active, input[type="submit"].active, input[type="submit"]:active, input[type="reset"].active, input[type="reset"]:active {
     transition-delay: 0s;
     transition-duration: .1s; }
 
@@ -151,39 +151,39 @@ button, .red-button, .green-button, .blue-button, input[type="button"], input[ty
   font-weight: bold;
   text-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.7);
   background: linear-gradient(to top, #E43030 30%, #e84b4b 80%);
-  box-shadow: 0 0 0.5em rgba(228, 48, 48, 0.7), inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0.5em rgba(228, 48, 48, 0.7), 0 0 transparent, inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
   border-radius: 6px 6px 8px 8px;
   transition-property: box-shadow, border-radius; }
   .red-button.active, .red-button:active {
     background: linear-gradient(to top, #E43030 30%, #e84b4b 80%);
     border-radius: 6px;
-    box-shadow: 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0 transparent, 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2); }
 
 .green-button {
   color: white;
   font-weight: bold;
   text-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.7);
   background: linear-gradient(to top, #19A187 30%, #1dbb9d 80%);
-  box-shadow: 0 0 0.5em rgba(25, 161, 135, 0.7), inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0.5em rgba(25, 161, 135, 0.7), 0 0 transparent, inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
   border-radius: 6px 6px 8px 8px;
   transition-property: box-shadow, border-radius; }
   .green-button.active, .green-button:active {
     background: linear-gradient(to top, #19A187 30%, #1dbb9d 80%);
     border-radius: 6px;
-    box-shadow: 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0 transparent, 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2); }
 
-.blue-button {
+.blue-button, .checktext input:checked + span {
   color: white;
   font-weight: bold;
   text-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.7);
   background: linear-gradient(to top, #367bf0 30%, #528ef2 80%);
-  box-shadow: 0 0 0.5em rgba(54, 123, 240, 0.7), inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0.5em rgba(54, 123, 240, 0.7), 0 0 transparent, inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
   border-radius: 6px 6px 8px 8px;
   transition-property: box-shadow, border-radius; }
-  .blue-button.active, .blue-button:active {
+  .blue-button.active, .checktext input:checked + span.active, .blue-button:active, .checktext input:checked + span:active {
     background: linear-gradient(to top, #367bf0 30%, #528ef2 80%);
     border-radius: 6px;
-    box-shadow: 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0 transparent, 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2); }
 
 label {
   display: inline-block;
@@ -262,34 +262,48 @@ input[type=radio] {
     box-shadow: 0 0 0.5em rgba(54, 123, 240, 0.7), inset 0 0.12em 0.1em rgba(255, 255, 255, 0.25);
     border-bottom-width: .15em; }
 
-.onoffswitch {
+.checktext {
+  width: auto;
+  margin: .5em; }
+  .checktext input {
+    display: none; }
+    .checktext input + span {
+      font-weight: bold;
+      padding: 1em;
+      transition-delay: 0s; }
+    .checktext input:checked + span {
+      padding: 1em; }
+
+.switch {
   height: 2.5rem;
   width: 5rem;
   padding: 0;
   position: relative; }
-  .onoffswitch > div {
-    height: 100%;
-    width: 100%;
-    border-radius: 999px;
-    background: transparent;
-    transition: background-color .2s;
-    box-shadow: inset 2px 2px 2px 1px rgba(0, 0, 0, 0.1), inset -2px -2px 1px white; }
-    .onoffswitch > div::before {
-      content: '';
-      display: block;
-      height: calc(2.5rem + 2px);
-      width: calc(2.5rem + 2px);
-      border-radius: 100%;
-      background: white;
-      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-      transform: translate(0, -1px);
-      transition: transform .2s; }
-  .onoffswitch input {
+  .switch input {
     display: none; }
-    .onoffswitch input:checked + div {
+    .switch input + div {
+      height: 100%;
+      width: 100%;
+      border-radius: 999px;
+      background: transparent;
+      transition-property: box-shadow, background-color;
+      transition-duration: .2s;
+      transition-delay: .2s;
+      box-shadow: 3px 3px 2px -2px rgba(0, 0, 0, 0.1), inset 2px 2px 2px 1px rgba(0, 0, 0, 0.1), inset -2px -2px 1px white; }
+      .switch input + div::before {
+        content: '';
+        display: block;
+        height: calc(2.5rem + 2px);
+        width: calc(2.5rem + 2px);
+        border-radius: 100%;
+        background: white;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -1px 3px rgba(0, 0, 0, 0.1);
+        transform: translate(0, -1px);
+        transition: transform .2s; }
+    .switch input:checked + div {
       background: #367bf0;
-      box-shadow: inset 0 2px 3px 2px rgba(0, 0, 0, 0.2); }
-      .onoffswitch input:checked + div::before {
+      box-shadow: 0 0 0.5em rgba(54, 123, 240, 0.7), inset 0 2px 2px 2px rgba(0, 0, 0, 0.3), inset 0 0 transparent; }
+      .switch input:checked + div::before {
         transform: translate(2.5rem, -1px); }
 
 hr {
