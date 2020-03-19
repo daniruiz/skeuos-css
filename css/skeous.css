@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Cantarell:400,700&display=swap");
+@font-face {
+  font-family: 'Cantarell';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local("Cantarell Thin"), local("Cantarell-Thin"), url(Cantarell-Thin.otf) format("otf"); }
 :root {
   --bg-color: #f2f3f7;
   --fg-color: #7b7e8c;

@@ -10,6 +10,17 @@ $fg-color: #7b7e8c;
 
 $glow-shadow: 0 0 .5em transparentize($blue, .3);
 
+@import url('https://fonts.googleapis.com/css?family=Cantarell:400,700&display=swap');
+
+// Google fonts does not include Cantarell Thin
+@font-face {
+    font-family: 'Cantarell';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: local('Cantarell Thin'), local('Cantarell-Thin'), url(Cantarell-Thin.otf) format('otf');
+}
+
 :root {
     --bg-color: #{$bg-color};
     --fg-color: #{$fg-color};
