@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Cantarell:400,700&display=swap");
-@font-face {
-  font-family: 'Cantarell';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: local("Cantarell Thin"), local("Cantarell-Thin"), url(Cantarell-Thin.otf) format("otf"); }
 :root {
   --bg-color: #f2f3f7;
   --fg-color: #7b7e8c;
@@ -349,3 +343,10 @@ blockquote {
   border-radius: 4px;
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.05);
   border-left: 6px solid #367bf0; }
+
+@font-face {
+  font-family: 'Cantarell';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local("Cantarell Thin"), local("Cantarell-Thin"), url(Cantarell-Thin.otf); }
