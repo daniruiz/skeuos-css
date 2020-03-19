@@ -193,4 +193,4 @@ Form elements
 <br>
 <hr>
 <br>
-<img src="https://github.com/daniruiz/skeous-css/blob/master/Images/preview.png?raw=true" width=900>
+<img src="https://raw.githubusercontent.com/daniruiz/skeuos-css/master/Images/preview.png" width=900>
