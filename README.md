@@ -1,12 +1,12 @@
-# Skeous CSS library
+# Skeuos CSS library
 
-###### Skeous CSS is licensed under the MIT License
+###### Skeuos CSS is licensed under the MIT License
 <hr>
 
 
 
 
-Skeous CSS Palette
+Skeuos CSS Palette
 ------------------
 
 - ![#265ab1](https://placehold.it/15/265ab1/000000?text=+) `#265AB1`
