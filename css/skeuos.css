@@ -92,7 +92,9 @@ input[type="number"], input[type="color"], select, textarea {
   background: #f2f3f7;
   color: #7b7e8c;
   font-weight: normal;
-  padding: 15px 20px;
+  padding: 0 1.25em;
+  line-height: 1.25em;
+  height: 3.5em;
   margin: 10px 0;
   font-size: 1.1rem;
   cursor: text;
@@ -103,6 +105,10 @@ input[type="number"], input[type="color"], select, textarea {
   -moz-user-select: text;
   -ms-user-select: text;
   transition: box-shadow .2s; }
+
+textarea {
+  height: 350px;
+  padding: 1.25em; }
 
 select {
   cursor: pointer;
