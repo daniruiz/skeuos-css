@@ -190,31 +190,31 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
         transition-delay: 0s;
         transition-duration: .1s;
     }
-}
 
-@each $name, $color in ('red': $red, 'green': $green, 'blue': $blue) {
-    .#{$name}-button {
-        @extend button;
+    @each $name, $color in ('red': $red, 'green': $green, 'blue': $blue) {
+        @at-root .#{$name}-button, &.#{$name}-button {
+            @extend button;
 
-        $_bg-image: linear-gradient(to top, $color 30%, lighten($color, 6%) 80%);
+            $_bg-image: linear-gradient(to top, $color 30%, lighten($color, 6%) 80%);
 
-        color: white;
-        font-weight: bold;
-        text-shadow: 0 .1em .1em transparentize(black, .3);
-        background: $_bg-image;
-        box-shadow: 0 0 .5em transparentize($color, .3),
-                    0 0 transparent,
-                    inset 0 -5px 0 transparentize(black, .95),
-                    inset 0 2px 0 transparentize(white, 0.8);
-        border-radius: 6px 6px 8px 8px;
-        transition-property: box-shadow, border-radius;
-
-        &.active, &:active {
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 .1em .1em transparentize(black, .3);
             background: $_bg-image;
-            border-radius: 6px;
-            box-shadow: 0 0 transparent,
+            box-shadow: 0 0 .5em transparentize($color, .3),
                         0 0 transparent,
-                        inset 0 2px 5px 2px transparentize(black, 0.8);
+                        inset 0 -5px 0 transparentize(black, .95),
+                        inset 0 2px 0 transparentize(white, 0.8);
+            border-radius: 6px 6px 8px 8px;
+            transition-property: box-shadow, border-radius;
+
+            &.active, &:active {
+                background: $_bg-image;
+                border-radius: 6px;
+                box-shadow: 0 0 transparent,
+                            0 0 transparent,
+                            inset 0 2px 5px 2px transparentize(black, 0.8);
+            }
         }
     }
 }
