@@ -48,7 +48,10 @@ html, body {
   background-color: #f2f3f7;
   color: #7b7e8c;
   margin: 0;
-  font-size: 10pt; }
+  padding: 0;
+  font-size: 10pt;
+  height: 100%;
+  overflow: auto; }
 
 .with-shadow, .outset, button, .checktext input + span, .blue-button, .checktext input:checked + span, button.blue-button, .green-button, button.green-button, .green-button.blue-button, .red-button, button.red-button, .red-button.blue-button, .red-button.green-button, input[type="button"], input[type="submit"], input[type="reset"], select, input[type="text"]:not(select):focus, input[type="search"]:not(select):focus, input[type="tel"]:not(select):focus, input[type="url"]:not(select):focus,
 input[type="email"]:not(select):focus, input[type="password"]:not(select):focus, input[type="date"]:not(select):focus,
