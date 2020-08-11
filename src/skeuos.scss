@@ -36,22 +36,16 @@ $glow-shadow: 0 0 .5em transparentize($blue, .3);
 * {
     box-sizing: border-box;
     outline: none;
-    user-select: none;
     -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent !important;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
     -webkit-touch-callout: none;
-    cursor: default;
     font-family: 'Cantarell', sans-serif;
     letter-spacing: 0;
 }
 
-.selectable, .selectable * {
+.selectable {
     cursor: auto;
     user-select: text;
     -webkit-touch-callout: text;
@@ -69,6 +63,12 @@ html, body {
     font-size: 10pt;
     height: 100%;
     overflow: auto;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .with-shadow {
@@ -223,16 +223,14 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
 }
 
 label {
-    &, & * { cursor: pointer; }
-
+    cursor: pointer;
     display: inline-block;
     padding: .56em 0;
 }
 
 a {
     &, &:link, &:visited, &:hover &:active {
-        &, & * { cursor: pointer; }
-
+        cursor: pointer;
         font-weight: bold;
         color: $blue;
         font-weight: bold;
@@ -424,18 +422,16 @@ pre {
 }
 
 code, pre {
-    &, & * {
-        font-size: .9rem;
-        font-family: monospace;
-        line-height: 2em;
-        cursor: auto;
-        user-select: text;
-        -webkit-touch-callout: text;
-        -webkit-user-select: text;
-        -khtml-user-select: text;
-        -moz-user-select: text;
-        -ms-user-select: text;
-    }
+    font-size: .9rem;
+    font-family: monospace;
+    line-height: 2em;
+    cursor: auto;
+    user-select: text;
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
 }
 
 blockquote {

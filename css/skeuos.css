@@ -21,21 +21,15 @@
 * {
   box-sizing: border-box;
   outline: none;
-  user-select: none;
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent !important;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
   -webkit-touch-callout: none;
-  cursor: default;
   font-family: 'Cantarell', sans-serif;
   letter-spacing: 0; }
 
-.selectable, .selectable * {
+.selectable {
   cursor: auto;
   user-select: text;
   -webkit-touch-callout: text;
@@ -51,7 +45,13 @@ html, body {
   padding: 0;
   font-size: 10pt;
   height: 100%;
-  overflow: auto; }
+  overflow: auto;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
 
 .with-shadow, .outset, button, .checktext input + span, .blue-button, .checktext input:checked + span, button.blue-button, .green-button, button.green-button, .green-button.blue-button, .red-button, button.red-button, .red-button.blue-button, .red-button.green-button, input[type="button"], input[type="submit"], input[type="reset"], select, input[type="text"]:not(select):focus, input[type="search"]:not(select):focus, input[type="tel"]:not(select):focus, input[type="url"]:not(select):focus,
 input[type="email"]:not(select):focus, input[type="password"]:not(select):focus, input[type="date"]:not(select):focus,
@@ -194,18 +194,16 @@ button, .checktext input + span, .blue-button, .checktext input:checked + span, 
       box-shadow: 0 0 transparent, 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2); }
 
 label {
+  cursor: pointer;
   display: inline-block;
   padding: .56em 0; }
-  label, label * {
-    cursor: pointer; }
 
 a, a:link, a:visited, a:hover a:active {
+  cursor: pointer;
   font-weight: bold;
   color: #367bf0;
   font-weight: bold;
   text-decoration: none; }
-  a, a *, a:link, a:link *, a:visited, a:visited *, a:hover a:active, a:hover a:active * {
-    cursor: pointer; }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5em; }
@@ -332,7 +330,7 @@ pre {
   background: white;
   margin: 4em 0; }
 
-code, code *, pre, pre * {
+code, pre {
   font-size: .9rem;
   font-family: monospace;
   line-height: 2em;
