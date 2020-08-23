@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cantarell:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400,700");
 :root {
   --bg-color: #f2f3f7;
   --fg-color: #7b7e8c;
@@ -26,7 +26,7 @@
   -webkit-tap-highlight-color: transparent !important;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
   -webkit-touch-callout: none;
-  font-family: 'Cantarell', sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 0; }
 
 .selectable {
@@ -347,10 +347,3 @@ blockquote {
   border-radius: 4px;
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.05);
   border-left: 6px solid #367bf0; }
-
-@font-face {
-  font-family: 'Cantarell';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: local("Cantarell Thin"), local("Cantarell-Thin"), url(Cantarell-Thin.otf); }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700');
+
 $red: #E43030;
 $green: #19A187;
 $blue: #367bf0;
@@ -41,7 +43,7 @@ $glow-shadow: 0 0 .5em transparentize($blue, .3);
     -webkit-tap-highlight-color: transparent !important;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
     -webkit-touch-callout: none;
-    font-family: 'Cantarell', sans-serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 0;
 }
 
@@ -437,15 +439,4 @@ blockquote {
     border-radius: 4px;
     box-shadow: 0 5px 30px 0 transparentize(black, .95);
     border-left: 6px solid $blue;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Cantarell:400,700&display=swap');
-
-// Google fonts does not include Cantarell Thin
-@font-face {
-    font-family: 'Cantarell';
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-    src: local('Cantarell Thin'), local('Cantarell-Thin'), url(Cantarell-Thin.otf);
 }
