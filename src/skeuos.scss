@@ -201,7 +201,6 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
 
             color: white;
             font-weight: bold;
-            text-shadow: 0 .1em .1em transparentize(black, .3);
             background: $color;
             box-shadow: 0 0 .5em transparentize($color, .3),
                         0 0 transparent,

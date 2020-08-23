@@ -158,7 +158,6 @@ button, .checktext input + span, .blue-button, .checktext input:checked + span, 
   .red-button, button.red-button, .checktext input + span.red-button, .red-button.blue-button, .red-button.green-button, input.red-button[type="button"], input.red-button[type="submit"], input.red-button[type="reset"] {
     color: white;
     font-weight: bold;
-    text-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.7);
     background: #E43030;
     box-shadow: 0 0 0.5em rgba(228, 48, 48, 0.7), 0 0 transparent, inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
     border-radius: 6px 6px 8px 8px;
@@ -170,7 +169,6 @@ button, .checktext input + span, .blue-button, .checktext input:checked + span, 
   .green-button, button.green-button, .checktext input + span.green-button, .green-button.blue-button, input.green-button[type="button"], input.green-button[type="submit"], input.green-button[type="reset"] {
     color: white;
     font-weight: bold;
-    text-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.7);
     background: #19A187;
     box-shadow: 0 0 0.5em rgba(25, 161, 135, 0.7), 0 0 transparent, inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
     border-radius: 6px 6px 8px 8px;
@@ -182,7 +180,6 @@ button, .checktext input + span, .blue-button, .checktext input:checked + span, 
   .blue-button, .checktext input:checked + span, button.blue-button, .checktext input + span.blue-button, input.blue-button[type="button"], input.blue-button[type="submit"], input.blue-button[type="reset"] {
     color: white;
     font-weight: bold;
-    text-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.7);
     background: #367bf0;
     box-shadow: 0 0 0.5em rgba(54, 123, 240, 0.7), 0 0 transparent, inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
     border-radius: 6px 6px 8px 8px;
