@@ -160,36 +160,36 @@ button, .checktext input + span, .blue-button, .checktext input:checked + span, 
     color: white;
     font-weight: bold;
     text-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.7);
-    background: linear-gradient(to top, #E43030 30%, #e84b4b 80%);
+    background: #E43030;
     box-shadow: 0 0 0.5em rgba(228, 48, 48, 0.7), 0 0 transparent, inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
     border-radius: 6px 6px 8px 8px;
     transition-property: box-shadow, border-radius; }
     .red-button.active, .red-button:active, button.red-button.active, button.red-button:active, input.red-button.active[type="button"], input.red-button[type="button"]:active, input.red-button.active[type="submit"], input.red-button[type="submit"]:active, input.red-button.active[type="reset"], input.red-button[type="reset"]:active {
-      background: linear-gradient(to top, #E43030 30%, #e84b4b 80%);
+      background: #E43030;
       border-radius: 6px;
       box-shadow: 0 0 transparent, 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2); }
   .green-button, button.green-button, .checktext input + span.green-button, .green-button.blue-button, input.green-button[type="button"], input.green-button[type="submit"], input.green-button[type="reset"] {
     color: white;
     font-weight: bold;
     text-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.7);
-    background: linear-gradient(to top, #19A187 30%, #1dbb9d 80%);
+    background: #19A187;
     box-shadow: 0 0 0.5em rgba(25, 161, 135, 0.7), 0 0 transparent, inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
     border-radius: 6px 6px 8px 8px;
     transition-property: box-shadow, border-radius; }
     .green-button.active, .green-button:active, button.green-button.active, button.green-button:active, input.green-button.active[type="button"], input.green-button[type="button"]:active, input.green-button.active[type="submit"], input.green-button[type="submit"]:active, input.green-button.active[type="reset"], input.green-button[type="reset"]:active {
-      background: linear-gradient(to top, #19A187 30%, #1dbb9d 80%);
+      background: #19A187;
       border-radius: 6px;
       box-shadow: 0 0 transparent, 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2); }
   .blue-button, .checktext input:checked + span, button.blue-button, .checktext input + span.blue-button, input.blue-button[type="button"], input.blue-button[type="submit"], input.blue-button[type="reset"] {
     color: white;
     font-weight: bold;
     text-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.7);
-    background: linear-gradient(to top, #367bf0 30%, #528ef2 80%);
+    background: #367bf0;
     box-shadow: 0 0 0.5em rgba(54, 123, 240, 0.7), 0 0 transparent, inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
     border-radius: 6px 6px 8px 8px;
     transition-property: box-shadow, border-radius; }
     .blue-button.active, .checktext input:checked + span.active, .blue-button:active, .checktext input:checked + span:active, button.blue-button.active, button.blue-button:active, input.blue-button.active[type="button"], input.blue-button[type="button"]:active, input.blue-button.active[type="submit"], input.blue-button[type="submit"]:active, input.blue-button.active[type="reset"], input.blue-button[type="reset"]:active {
-      background: linear-gradient(to top, #367bf0 30%, #528ef2 80%);
+      background: #367bf0;
       border-radius: 6px;
       box-shadow: 0 0 transparent, 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2); }
 

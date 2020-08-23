@@ -198,12 +198,10 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
         @at-root .#{$name}-button, &.#{$name}-button {
             @extend button;
 
-            $_bg-image: linear-gradient(to top, $color 30%, lighten($color, 6%) 80%);
-
             color: white;
             font-weight: bold;
             text-shadow: 0 .1em .1em transparentize(black, .3);
-            background: $_bg-image;
+            background: $color;
             box-shadow: 0 0 .5em transparentize($color, .3),
                         0 0 transparent,
                         inset 0 -5px 0 transparentize(black, .95),
@@ -212,7 +210,7 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
             transition-property: box-shadow, border-radius;
 
             &.active, &:active {
-                background: $_bg-image;
+                background: $color;
                 border-radius: 6px;
                 box-shadow: 0 0 transparent,
                             0 0 transparent,
